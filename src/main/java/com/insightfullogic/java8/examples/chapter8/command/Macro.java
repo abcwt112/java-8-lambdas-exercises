@@ -20,5 +20,26 @@ public class Macro {
         actions.forEach(Action::perform);
     }
 
+    public static void main(String[] args) {
+        Editor e = new Editor() {
+            @Override
+            public void save() {
+
+            }
+
+            @Override
+            public void open() {
+
+            }
+
+            @Override
+            public void close() {
+
+            }
+        };
+        Macro m = new Macro();
+        m.record(e::close);
+    }
+
 }
 // END Macro
